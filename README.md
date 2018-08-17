@@ -1,6 +1,6 @@
 #gulpSkills
 var gulp  = require ('gulp'),
-		$=require("gulp-load-plugins")();
+$=require("gulp-load-plugins")();
 var del = require('del');
 
 // 解析css
@@ -12,7 +12,7 @@ gulp.task("css",function () {
       cascade: true, //是否美化属性值 默认：true
       remove:true //是否去掉不必要的前缀 默认：true
   }))
-	.pipe($.rename({suffix: '.min'}))   //rename压缩后的文件名
+  .pipe($.rename({suffix: '.min'}))   //rename压缩后的文件名
   .pipe( gulp.dest("./app/assets/css/"))
 });
 
